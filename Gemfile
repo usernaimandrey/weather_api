@@ -42,10 +42,14 @@ group :development do
   gem 'spring'
 end
 
+gem 'delayed_job_active_record'
+
 gem 'grape', '~> 1.6.2'
 
 gem 'grape-swagger', '~> 1.5.0'
 
 gem 'grape-swagger-rails', '~> 0.3.1'
+
+gem 'http'
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
