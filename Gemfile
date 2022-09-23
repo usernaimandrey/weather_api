@@ -42,5 +42,10 @@ group :development do
   gem 'spring'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'grape', '~> 1.6.2'
+
+gem 'grape-swagger', '~> 1.5.0'
+
+gem 'grape-swagger-rails', '~> 0.3.1'
+
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
