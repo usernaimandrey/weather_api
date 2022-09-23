@@ -3,7 +3,7 @@
 class FetchWeatherDataJob < ApplicationJob
   queue_as :default
 
-  def perform
-    WeatherService.call
+  def perform(url)
+    WeatherService.call(url)
   end
 end

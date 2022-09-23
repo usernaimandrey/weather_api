@@ -24,4 +24,10 @@ push:
 env-prepare:
 	bin/rails env:prepare
 
+start-jobs:
+	bin/rails jobs:work
+
+clear-jobs:
+	bin/rails jobs:clear
+
 .PHONY: test

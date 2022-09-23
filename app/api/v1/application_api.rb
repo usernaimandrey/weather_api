@@ -4,7 +4,7 @@ require 'grape-swagger'
 
 module V1
   class ApplicationAPI < ApplicationAPI
-    content_type :json, 'application/json;charset=UTF-8'
+    # content_type :json, 'application/json;charset=UTF-8'
 
     format :json
 

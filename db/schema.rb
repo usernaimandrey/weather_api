@@ -28,10 +28,10 @@ ActiveRecord::Schema.define(version: 2022_09_23_104655) do
   end
 
   create_table "weathers", force: :cascade do |t|
-    t.integer "minimal_temperature"
-    t.integer "maximal_temperature"
-    t.integer "avg_temperature"
-    t.integer "current_temperature"
+    t.float "minimal_temperature"
+    t.float "maximal_temperature"
+    t.float "avg_temperature"
+    t.float "current_temperature"
     t.datetime "data"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

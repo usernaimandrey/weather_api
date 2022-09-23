@@ -2,11 +2,10 @@
 
 class WeatherService
   class << self
-    def call
-      url = "#{URL_API}/#{CITY_ID}/#{API_REFERENCE}?apikey=#{API_KEY}&language=#{I18n.default_locale}&details=true"
+    def call(url)
       request = JSON.parse(HTTP.get(url).body)
 
-      request.reverse_each do |hour|
+      request.each do |hour|
         attr = {
           data: hour['LocalObservationDateTime'],
           minimal_temperature: hour['TemperatureSummary']['Past24HourRange']['Minimum']['Metric']['Value'],
@@ -17,8 +16,8 @@ class WeatherService
 
         Weather.create(attr)
       end
-    rescue StandardError
-      []
+      # rescue StandardError
+      #   []
     end
 
     private
