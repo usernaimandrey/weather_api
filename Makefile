@@ -1,4 +1,4 @@
-setup:
+setup: env-prepare
 	bin/setup
 	bin/rails db:seed
 
