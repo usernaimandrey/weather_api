@@ -25,6 +25,8 @@ if %w[development test].include? ENV['RAILS_ENV']
   Dotenv::Railtie.load
 end
 
+# Dotenv::Railtie.load
+
 URL_API = ENV.fetch('URL_API', nil)
 CITY_ID = ENV.fetch('CITY_ID', nil)
 API_REFERENCE = ENV.fetch('API_REFERENCE', nil)

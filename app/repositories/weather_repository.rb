@@ -4,17 +4,8 @@ module WeatherRepository
   extend ActiveSupport::Concern
 
   included do
-    scope :historical, lambda {
-                         select(:minimal_temperature,
-                                :maximal_temperature,
-                                :avg_temperature,
-                                :current_temperature,
-                                :data,
-                                :id)
-                       }
+    scope :historical, -> { select(:id, :date_time, :current_temperature).limit(24) }
 
-    scope :max_temperature, -> { order('maximal_temperature DESC').limit(1) }
-
-    scope :min_temperature, -> { order('minimal_temperature ASC').limit(1) }
+    scope :old_records, -> { where(created_at: (24.hours.ago)..(1.hour.ago)) }
   end
 end

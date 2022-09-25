@@ -2,13 +2,21 @@
 
 module V1
   class WeatherAPI < ApplicationAPI
+    helpers do
+      def temperature_by_time
+        temperature = Weather.where('date_time < ?', Time.zone.at(params[:time])).limit(1).first
+        return error!('404 not found', 404) if (temperature.date_time.to_i - params[:time]).abs > 1.hour
+
+        temperature
+      end
+    end
     resource :weather do
       desc 'Closest temperature to transmitted time'
       params do
         requires :time, type: Integer
       end
       get '/by_time/:time' do
-        { time: params[:time] }
+        temperature_by_time
       end
 
       namespace :current do
@@ -26,23 +34,17 @@ module V1
 
         desc 'Maximum temperature in 24 hours'
         get :max do
-          { maximal_temperature: Weather
-            .max_temperature
-            .first
-            .maximal_temperature }
+          { maximal_temperature: Weather.maximum(:current_temperature) }
         end
 
         desc 'Minimum temperature in 24 hours'
         get :min do
-          { maximal_temperature: Weather
-            .min_temperature
-            .first
-            .minimal_temperature }
+          { maximal_temperature: Weather.minimum(:current_temperature) }
         end
 
         desc 'Average temperature for 24 hours'
         get :avg do
-          { avg_temperature: Weather.first.avg_temperature }
+          { avg_temperature: Weather.average(:current_temperature).ceil(1) }
         end
       end
     end

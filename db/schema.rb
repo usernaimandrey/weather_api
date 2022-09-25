@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2022_09_23_104655) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer "priority", default: 0, null: false
     t.integer "attempts", default: 0, null: false
@@ -28,11 +31,8 @@ ActiveRecord::Schema.define(version: 2022_09_23_104655) do
   end
 
   create_table "weathers", force: :cascade do |t|
-    t.float "minimal_temperature"
-    t.float "maximal_temperature"
-    t.float "avg_temperature"
     t.float "current_temperature"
-    t.datetime "data"
+    t.datetime "date_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
