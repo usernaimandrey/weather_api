@@ -13,8 +13,8 @@ development:
   adapter: postgresql
   encoding: unicode
   database: db/weather_api
-  username: andery
-  password:
+  username: <%= ENV.fetch("USER") %>
+  password: <%= ENV.fetch("PASSWORD_DB") %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
@@ -26,7 +26,7 @@ production:
   adapter: postgresql
   encoding: unicode
   database: db/weather_api
-  username: andery
-  password: 
+  username: <%= ENV.fetch("USER") %>
+  password: <%= ENV.fetch("PASSWORD_DB") %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
