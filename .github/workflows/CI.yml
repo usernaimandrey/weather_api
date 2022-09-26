@@ -33,6 +33,10 @@ jobs:
           POSTGRES_PASSWORD: postgres
           POSTGRES_USER: postgres
           RAILS_ENV: test
+          API_KEY: ${{ secrets.API_KEY }}
+          API_REFERENCE: ${{ secrets.API_REFERENCE }}
+          CITY_ID: ${{ secrets.CITY_ID }}
+          URL_API: ${{ secrets.URL_API }}
         run: make setup
         
       - name: Linter check
