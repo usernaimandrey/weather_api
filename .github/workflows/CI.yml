@@ -43,4 +43,9 @@ jobs:
         run: make lint
         
       - name: Run Test
+        env:
+           API_KEY: ${{ secrets.API_KEY }}
+           API_REFERENCE: ${{ secrets.API_REFERENCE }}
+           CITY_ID: ${{ secrets.CITY_ID }}
+           URL_API: ${{ secrets.URL_API }}
         run: make test
