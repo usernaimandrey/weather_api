@@ -15,7 +15,7 @@ lint-fix:
 	bundle exec rubocop -A
 
 test:
-	NODE_ENV=test bin/rails test
+	NODE_ENV=test bundle exec rspec
 
 #аргумент commit=[commit_name,skip] skip - не обязателный
 push:

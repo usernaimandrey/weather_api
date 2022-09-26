@@ -4,10 +4,10 @@ module V1
   class WeatherAPI < ApplicationAPI
     helpers do
       def temperature_by_time
-        temperature = Weather.where('date_time < ?', Time.zone.at(params[:time])).limit(1).first
-        return error!('404 not found', 404) if (temperature.date_time.to_i - params[:time]).abs > 1.hour
+        temperature = Weather.created_between(Time.zone.at(params[:time]), Time.zone.at(params[:time]) - 1.hour).limit(1)
+        return error!('404 not found', 404) if temperature.empty?
 
-        temperature
+        temperature.first
       end
     end
     resource :weather do
@@ -22,7 +22,7 @@ module V1
       namespace :current do
         desc 'Current temperature'
         get do
-          { data: Weather.first.data, current_temperature: Weather.first.current_temperature }
+          Weather.select(:id, :date_time, :current_temperature).first
         end
       end
 
@@ -39,7 +39,7 @@ module V1
 
         desc 'Minimum temperature in 24 hours'
         get :min do
-          { maximal_temperature: Weather.minimum(:current_temperature) }
+          { minimal_temperature: Weather.minimum(:current_temperature) }
         end
 
         desc 'Average temperature for 24 hours'

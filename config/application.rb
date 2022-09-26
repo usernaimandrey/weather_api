@@ -39,6 +39,8 @@ module WeatherApi
 
     config.active_job.queue_adapter = :delayed_job
 
+    config.generators.test_framework = :rspec
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

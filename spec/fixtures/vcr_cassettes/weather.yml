@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://dataservice.accuweather.com/currentconditions/v1/294021//historical/24?apikey=zB8A95nj3Zcz4knYGlomNstKF1GLfGxS&language=ru
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - dataservice.accuweather.com
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 26 Sep 2022 01:02:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '11365'
+      Connection:
+      - close
+      Server:
+      - Microsoft-IIS/10.0
+      Ratelimit-Limit:
+      - '50'
+      Ratelimit-Remaining:
+      - '49'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept
+      Access-Control-Max-Age:
+      - '3628800'
+      Cache-Control:
+      - public, max-age=590
+      Expires:
+      - Mon, 26 Sep 2022 01:12:39 GMT
+      Akamai-Grn:
+      - 0.92112817.1664154169.39a5f084
+      Host:
+      - api.accuweather.com
+      User-Agent:
+      - http.rb/5.1.0
+      X-Forwarded-For:
+      - 94.25.175.243
+      X-Forwarded-Port:
+      - '80'
+      X-Forwarded-Proto:
+      - http
+    body:
+      encoding: UTF-8
+      string: '[{"LocalObservationDateTime":"2022-09-26T02:58:00+03:00","EpochTime":1664150280,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":5.6,"Unit":"C","UnitType":17},"Imperial":{"Value":42.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-26T01:58:00+03:00","EpochTime":1664146680,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":6.9,"Unit":"C","UnitType":17},"Imperial":{"Value":44.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-26T01:05:00+03:00","EpochTime":1664143500,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":6.9,"Unit":"C","UnitType":17},"Imperial":{"Value":44.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T23:59:00+03:00","EpochTime":1664139540,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":7.1,"Unit":"C","UnitType":17},"Imperial":{"Value":45.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T23:06:00+03:00","EpochTime":1664136360,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":7.1,"Unit":"C","UnitType":17},"Imperial":{"Value":45.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T21:59:00+03:00","EpochTime":1664132340,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":7.1,"Unit":"C","UnitType":17},"Imperial":{"Value":45.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T20:59:00+03:00","EpochTime":1664128740,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":7.6,"Unit":"C","UnitType":17},"Imperial":{"Value":46.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T20:03:00+03:00","EpochTime":1664125380,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":7.6,"Unit":"C","UnitType":17},"Imperial":{"Value":46.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T18:58:00+03:00","EpochTime":1664121480,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":8.1,"Unit":"C","UnitType":17},"Imperial":{"Value":47.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T17:58:00+03:00","EpochTime":1664117880,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":8.1,"Unit":"C","UnitType":17},"Imperial":{"Value":47.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T17:04:00+03:00","EpochTime":1664114640,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":8.1,"Unit":"C","UnitType":17},"Imperial":{"Value":47.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T15:58:00+03:00","EpochTime":1664110680,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":8.0,"Unit":"C","UnitType":17},"Imperial":{"Value":46.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T14:58:00+03:00","EpochTime":1664107080,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":7.9,"Unit":"C","UnitType":17},"Imperial":{"Value":46.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T13:58:00+03:00","EpochTime":1664103480,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":7.8,"Unit":"C","UnitType":17},"Imperial":{"Value":46.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T13:04:00+03:00","EpochTime":1664100240,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":7.8,"Unit":"C","UnitType":17},"Imperial":{"Value":46.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T11:58:00+03:00","EpochTime":1664096280,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":7.6,"Unit":"C","UnitType":17},"Imperial":{"Value":46.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T11:03:00+03:00","EpochTime":1664092980,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":7.6,"Unit":"C","UnitType":17},"Imperial":{"Value":46.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T09:53:00+03:00","EpochTime":1664088780,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":5.8,"Unit":"C","UnitType":17},"Imperial":{"Value":42.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T08:58:00+03:00","EpochTime":1664085480,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":5.6,"Unit":"C","UnitType":17},"Imperial":{"Value":42.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T07:58:00+03:00","EpochTime":1664081880,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":5.7,"Unit":"C","UnitType":17},"Imperial":{"Value":42.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T06:58:00+03:00","EpochTime":1664078280,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":5.8,"Unit":"C","UnitType":17},"Imperial":{"Value":42.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T05:58:00+03:00","EpochTime":1664074680,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":6.3,"Unit":"C","UnitType":17},"Imperial":{"Value":43.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T04:58:00+03:00","EpochTime":1664071080,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":6.5,"Unit":"C","UnitType":17},"Imperial":{"Value":44.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"},{"LocalObservationDateTime":"2022-09-25T03:59:00+03:00","EpochTime":1664067540,"WeatherText":"Облачно","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":6.6,"Unit":"C","UnitType":17},"Imperial":{"Value":44.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021","Link":"http://www.accuweather.com/ru/ru/moscow/294021/current-weather/294021"}]'
+  recorded_at: Mon, 26 Sep 2022 01:02:49 GMT
+recorded_with: VCR 6.1.0
