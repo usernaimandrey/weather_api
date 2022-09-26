@@ -20,3 +20,4 @@
 /public/packs
 /public/packs-test
 .env
+.byebug_history
