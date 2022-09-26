@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe WeatherService do
   before(:each) do
-    @url = "#{URL_API}/#{CITY_ID}/#{API_REFERENCE}?apikey=#{API_KEY}&language=#{I18n.default_locale}"
+    @url = "#{URL_API}/#{CITY_ID}/#{API_REFERENCE}?apikey=#{ENV.fetch('API_KEY', nil)}&language=#{I18n.default_locale}"
     @expected = load_fixture('../fixtures/weather.json')
   end
 
