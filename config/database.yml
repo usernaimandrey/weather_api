@@ -16,7 +16,7 @@ development:
   username: <%= ENV.fetch("POSTGRES_USER") %>
   password: <%= ENV.fetch("POSTGRES_PASSWORD") %>
   port: <%= ENV.fetch("POSTGRES_PORT", '5432')%>
-  host: <%= ENV.fetch("POSTGRES_HOST", database) %>
+  host: <%= ENV.fetch("POSTGRES_HOST", 'database') %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
