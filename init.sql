@@ -1,2 +1,2 @@
-CREATE USER postgresql;
-ALTER USER postgresql WITH SUPERUSER;
+CREATE USER andery;
+ALTER USER andery WITH SUPERUSER;
