@@ -2,17 +2,11 @@ version: "3"
 
 services:
 
-  db:
-    image: postgres
-
-    environment:
-      POSTGRES_USER: postgresql
-      POSTGRES_PASSWORD: postgresql
-      PGDATA: "/var/lib/postgresql/data/pgdata"
+  database:
+    image: postgres:12.1
     volumes:
-      - ./2. Init Database:/docker-entrypoint-initdb.d/init.sql
-      - .:/var/lib/postgresql/data
-      
+      - db_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
   web:
     build:
       context: .
@@ -21,7 +15,13 @@ services:
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/myapp
+
+    env_file: .env
     ports:
       - "3000:3000"
     depends_on:
-      - db
+      - database
+    environment:
+      RAILS_ENV: development
+volumes:
+  db_data:
